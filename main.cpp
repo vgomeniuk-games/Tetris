@@ -5,7 +5,8 @@ const int N = 10;
 
 int field[M][N] = {0};
 
-struct { int x; int y; } buffer_a[4], buffer_b[4];
+// Buffers with points
+struct Point { int x; int y; } buffer_a[4], buffer_b[4];
 
 // Types of figures (cells in 2x4 field)
 int figures[7][4] = {
@@ -17,6 +18,15 @@ int figures[7][4] = {
     3, 5, 7, 6,  // J
     2, 3, 4, 5   // O
 };
+
+void getCoordinates2d(Point* buffer, int figure) {
+    // transform cell's number into 2d coordinates and fill buffer
+    for (int cell = 0; cell < 4; ++cell) {
+        auto p = (buffer + cell);
+        p->x = figures[figure][cell] % 2;
+        p->y = figures[figure][cell] / 2;
+    }
+}
 
 
 int main()
@@ -40,8 +50,14 @@ int main()
             }
         }
 
+        getCoordinates2d(buffer_a, 0);
+
         window.clear(sf::Color::White);
-        window.draw(sTiles);
+        for (int i = 0; i < 4; ++i) {
+            sTiles.setPosition(buffer_a[i].x * 18, buffer_a[i].y * 18);
+            window.draw(sTiles);
+        }
+
         window.display();
     }
 
