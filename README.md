@@ -1,6 +1,10 @@
 # Tetris
 Tetris game developed using SFML2 framework.
 
+Screenshors:
+![View 1](https://prnt.sc/fn76wt)
+![View 2](https://prnt.sc/fn77wf)
+
 Development Platform/Tools:
  - Ubuntu 14.04
  - Qt 5.7.0 (64 bit)
