@@ -2,8 +2,8 @@
 Tetris game developed using SFML2 framework.
 
 Screenshors:
-![View 1](https://prnt.sc/fn76wt)
-![View 2](https://prnt.sc/fn77wf)
+![View 1](https://image.prntscr.com/image/wHCvCKuHSEm6twICj-PEJw.png)
+![View 2](https://image.prntscr.com/image/vsfU4VFzS329o_8G-h66Fw.png)
 
 Development Platform/Tools:
  - Ubuntu 14.04
